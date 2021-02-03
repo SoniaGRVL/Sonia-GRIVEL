@@ -7,18 +7,15 @@ $(document).ready(function () {
 		});
 	});
 
-	$(window).scroll(function () {
-		var sc = $(this).scrollTop();
-		if (sc > 50) {
-			$('header').addClass('sticky');
-		} else {
-			$('header').removeClass('sticky');
-		}
-	});
-
 	$(".ul-liste a").on('click', function () {
 		$("html, body").animate({
-			scrollTop: $($.attr(this, 'href')).offset().top - 120
+			scrollTop: $($.attr(this, 'href')).offset().top - 64
 		}, 1000);
 	});
+
+	$(".home a").on('click', function () {
+		$("html, body").animate({
+			scrollTop: $($.attr(this, 'href')).offset().top - 64
+		}, 1000);
+	})
 })
